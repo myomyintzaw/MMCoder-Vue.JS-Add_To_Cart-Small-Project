@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -25,4 +25,23 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-</style>
+</style> -->
+
+
+<template>
+  <div>
+    <!-- <MasterLayout /> -->
+    <router-view />
+  </div>
+</template>
+
+
+<script>
+// import MasterLayout from './Layout/Master.vue';
+export default {
+  name: 'App',
+  // components: {
+  //   MasterLayout
+  // }
+};
+</script>
