@@ -19,7 +19,9 @@
                                 <img :src="p.thumbnail" class="img-fluid" alt="">
                             </div>
                             <div class="card-footer">
-                                <span>Price: <small>{{ p.price }}</small></span>
+                                <span class="fw-bolder text-secondary "
+                                    style="font-family: 'Playwrite GB J', cursive;  font-optical-sizing: auto;font-style:italic;font-weight: 500;">Price:
+                                    <small>${{ p.price.toFixed(2) }}</small></span>
                                 <a @click="addToCart(p)" class="btn btn-sm btn-success float-end">Add to cart</a>
                             </div>
                         </div>
@@ -68,7 +70,13 @@ export default {
             // Add to cart logic here
             // this.$root.cart.push(p);
             var cart = this.$root.cart;
-            cart.push(p);
+            var isInCart = cart.find((v) => { return v.title == p.title; });
+            if (isInCart) {
+                isInCart.qty++;
+            } else {
+                cart.push({ ...p, qty: 1 });
+            }
+
         }
     }
 }
