@@ -5,7 +5,7 @@
         <loader v-show="isload" />
 
         <!-- Content -->
-        <div v-show="!isload" class="container mt-5">
+        <div v-show="!isload" class="container mt-5 mb-5 p-3">
             <div class="row">
                 <!-- <div v-for="product in products" :key="product.id" class="col-md-4"> -->
                 <div v-for="(p, i) in products" :key="i" class="col-md-4">

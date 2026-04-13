@@ -1,6 +1,6 @@
 <template>
     <Master>
-        <div class="container mt-5">
+        <div class="container mt-5 mb-5 p-4" >
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -15,7 +15,7 @@
                 <tbody>
                     <tr v-for="(p, i) in cart" :key="i">
                         <td>{{ p.title }}</td>
-                        <td><img :src="p.thumbnail" alt="" class="img-fluid" style="width: 50px; height: 50px;"></td>
+                        <td><img :src="p.thumbnail" alt="" class="img-fluid" style="width:100px; height: 100px;"></td>
                         <td>${{ (Math.round(p.price * 100) / 100).toFixed(2) }}</td>
                         <td>
                             <div class="d-flex align-items-center">
@@ -33,7 +33,7 @@
             </table>
 
             <!-- Grand Total -->
-            <div class="row mt-4">
+            <div class="row mt-4 mb-4" >
                 <div class="col-md-8"></div>
                 <div class="col-md-4">
                     <div class="card">
@@ -44,8 +44,9 @@
                                 <h6>Grand Total:</h6>
                                 <h6>${{ (Math.round(grandTotal * 100) / 100).toFixed(2) }}</h6>
                             </div>
-                            <button class="btn btn-primary w-100 mt-3">Checkout</button>
+                            <button class="btn btn-primary w-100 mt-3 ">Checkout</button>
                         </div>
+                      
                     </div>
                 </div>
             </div>
